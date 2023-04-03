@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="ISO-8859-1">
+  <title>Insurance Management System</title>
+  <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+  <h1>Insurance Management System</h1>
+  <hr>
+  <h2>Save Insurance</h2>
+
+  <form action="#" th:action="@{/saveInsurance}" th:object="${insurance}"
+        method="POST">
+    <input type="text" th:field="*{insuranceName}"
+           placeholder="Insurance Name" class="form-control mb-4 col-4">
+
+    <input type="text" th:field="*{insuranceType}"
+           placeholder="Insurance Type" class="form-control mb-4 col-4">
+
+    <input type="date" min="{new Date().toISOString().split('T')[0]}" th:field="*{insurancePeriod}"
+           placeholder="Insurance Period" class="form-control mb-4 col-4">
+
+    <input type="text" th:field="*{insuranceLink}"
+           placeholder="Insurance Link" class="form-control mb-4 col-4">
+
+    <button type="submit" class="btn btn-info col-2"> Save Insurance</button>
+  </form>
+
+  <hr>
+
+  <a th:href = "@{/}"> Back to Insurance List</a>
+</div>
+</body>
+</html>

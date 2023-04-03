@@ -1,0 +1,6 @@
+Dear [[name]],<br>
+The [[insuranceName]] insurance is going to expire in [[days]]. Please renew or terminate the insurance.<br>
+<h3><a href="[[renewUrl]]" target="_self">RENEW</a></h3>
+<h3><a href="[[terminateUrl]]" target="_self">TERMINATE</a></h3>
+Thank you,<br>
+Multi Insurance Management System.
